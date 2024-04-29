@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+    <title>Pieslēgšanās</title>
+</head>
+<body>
+  <h1>Pieslēgšanās</h1>
+    <form action="/login" method="post">
+        <label for="username">Lietotājvārds:</label>
+        <input autocomplete="off" autofocus placeholder="Lietotājvārds" type="text" id="username" name="username"required><br>
+        <label for="password">Parole:</label>
+        <input autocomplete="off" autofocus placeholder="Parole" type="password" id="password" name="password"required><br>
+      <br>
+      <div id="button1">
+        <input type = "submit" value = "Ieiet kontā" name = "submit" id="variants">
+      </div>
+       <p>Nav konta? <a href="/register">Reģistrēties</a></p>
+    </form>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for category, msg in messages %}
+          <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</body>
+</html>

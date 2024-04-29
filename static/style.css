@@ -1,0 +1,154 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #969696;
+  background-size: cover;
+  background-position: absolute;
+  background-repeat: no-repeat;
+}
+
+ul{
+  text-align: center;
+}
+
+ul[class=flashes] {
+  background-color: #969696;
+  border-radius:3px;
+  font-size:20px;
+  font-weight:bold;
+  z-index:10px;
+  text-shadow:
+  1px 1px 0 #000,
+  -1px 1px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000;
+  color: white;
+  width:100%;
+  margin:3px;
+}
+
+#option_list{
+  position:absolute;
+  left: 44%;
+  top: 50%;
+  text-align: center;
+  display: inline-block;
+}
+#option_list1{
+  position:absolute;
+  left: 47%;
+  top: 50%;
+  text-align: center;
+  display: inline-block;
+}
+#button1{
+  text-align: center;
+  display: inline-block;
+}
+#variants{
+  background-color: #969696;
+  border-width: 1px;
+  border-color: black;
+  border-radius:3px;
+  font-size:20px;
+  font-weight:bold;
+  z-index:10px;
+  text-shadow:
+  1px 1px 0 #000,
+  -1px 1px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000;
+  color: white;
+  width:100%;
+  margin:3px;
+
+}
+#variants:active {
+  background-color: #ccc;
+  transform: translateY(1px);
+}
+
+#list{
+  color:#ff8800;
+  margin-top:25rem;
+  margin-left:25rem;
+  width:60%;
+  background-color: #00000059;
+}
+#user{
+  position:absolute;
+  color:#9bff70;
+  font-size:20px;
+  font-weight:bold;
+  margin-left:10rem;
+  transform: translate(0%, 50%);
+  width:10%;
+  background-color: #000000;
+  text-decoration: none;
+  cursor: grabbing;
+}
+h1{
+  margin-top: 10%;
+  text-align:center;
+  font-weight:bold;
+  color:#ffffff;
+  text-shadow:
+  1px 1px 0 #000,
+  -1px 1px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000;
+}
+input[type="text"]{
+  margin: 5px;
+  width: 15%;
+  margin-right:15px;
+  border: 3px solid #ccc;
+}
+input[type="task_text"]{
+  margin: 5px;
+  width: 100%;
+  margin-right:15px;
+  border: 3px solid #ccc;
+}
+input[type="password"]{
+  margin: 5px;
+  width: 15%;
+  margin-left:35px;
+  border: 3px solid #ccc;
+}
+form{
+  padding:1rem;
+  margin:3px;
+  text-align: center;
+
+}
+form.list{
+  padding:0;
+  margin:3px;
+  text-align: center;
+  display: inline-block;
+}
+
+#delete{
+  padding:0;
+  margin:3px;
+  text-align: center;
+  display: inline-block;
+}
+
+p,a{
+  margin-top:10px;
+}
+p{
+  color: white;
+  text-align: center;
+
+}
+a{
+  color:#3d77ff;
+}

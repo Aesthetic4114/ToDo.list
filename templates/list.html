@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+    <title>Lietotāja uzdevumu saraksts</title>
+</head>
+<body>
+    <h1>Lietotāja uzdevumu saraksts</h1>
+    <ul>
+        {% for task in tasks %}
+      <div id= "task">
+        <input type="checkbox" {% if task[3] %}checked{% endif %}>
+                <form action="/edit_task/{{ task[0] }}" method="post" class="list">
+                    <input type="task_text" name="new_description" value="{{ task[2] }}">
+                   <div id="button1">
+                    <button type="submit" id= "variants">Labot</button>
+                    </div>
+                </form>
+                       
+                <form action="/toggle_completed/{{ task[0] }}" class="list">
+                  <div id="button1">
+                  <button type="submit" id= "variants">
+                    {% if task[3] %}
+                        Atzīmēt kā neizpildītu
+                    {% else %}
+                        Atzīmēt kā izpildītu
+                    {% endif %}
+                  </button>
+                  </div>
+                </form>
+      
+                <form action="/delete_task/{{ task[0] }}" onclick="return confirm('Vai tiešām vēlaties dzēst šo uzdevumu?');" id="delete" class="list">
+                  <div id="button1">
+                  <button type="submit" id= "variants">
+                    Dzēst
+                  </button>
+                  </div>
+                </form>
+      </div>
+        {% endfor %}
+    </ul>
+    <form action="/add_task" method="post">
+        <input type="text" name="description" placeholder="Pievienot jaunu uzdevumu">
+      <div id="button1">
+        <button type="submit" id= "variants">Pievienot</button>
+      </div>
+    </form>
+  <div id="option_list1">
+    <a href="/logout"><button type="submit" id= "variants">Izrakstīties</button></a>
+  </div>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for category, msg in messages %}
+          <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</body>
+</html>

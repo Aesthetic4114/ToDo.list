@@ -1,0 +1,16 @@
+{
+"index":{
+    "register_button": "Reģistrēties",
+    "login_button": "Ieiet kontā"
+
+
+  },
+  "register":{
+    "username": "Lietotaja vārds",
+    "password": "Parole"
+  },
+  "login":{
+    "username": "Lietotaja vārds",
+    "password": "Parole"
+  }
+}
